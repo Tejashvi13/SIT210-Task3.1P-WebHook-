@@ -12,7 +12,7 @@ void setup()
    pinMode(led2, OUTPUT);
 
    // We are also going to declare a Particle.function so that we can turn the LED on and off from the cloud.
-   Particle.function("led",ledToggle);
+   Particle.publish("led",ledToggle);
    // This is saying that when we ask the cloud for the function "led", it will employ the function ledToggle() from this app.
 
    // For good measure, let's also make sure both LEDs are off when we start:
